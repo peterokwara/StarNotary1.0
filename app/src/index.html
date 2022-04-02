@@ -1,37 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>MetaCoin | Truffle Webpack Demo w/ Frontend</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StarNotary DAPP Front End</title>
+
+    <!-- <link href="./style.css" rel="stylesheet" /> -->
   </head>
-  <style>
-    input {
-      display: block;
-      margin-bottom: 12px;
-    }
-  </style>
   <body>
-    <h1>MetaCoin — Example Truffle Dapp</h1>
-    <p>You have <strong class="balance">loading...</strong> META</p>
+    <header><h1>Star Notary App</h1></header>
+    <main>
+      <section>
+        <div class="star-section" id="star-name-div">
+          <h3 class="star-section-heading" id="star-name-heading">
+            Star name
+          </h3>
+          <button
+            class="star-section-button"
+            div="star-name-button"
+            onclick="App.starNameFunc()"
+          >
+            Get a star
+          </button>
+          <div class="star-section-results" id="star-name-results"></div>
+        </div>
 
-    <h1>Send MetaCoin</h1>
+        <div class="star-section" id="star-owner-div">
+          <h3 class="star-section-heading" id="star-owner-heading">
+            Star Owner
+          </h3>
+          <button
+            class="star-section-button"
+            div="star-owner-button"
+            onclick="App.starOwnerFunc()"
+          >
+            Get star owner
+          </button>
+          <div class="star-section-results" id="star-owner-results"></div>
+        </div>
 
-    <label for="amount">Amount:</label>
-    <input type="text" id="amount" placeholder="e.g. 95" />
+        <div class="star-section" id="claim-star-section">
+          <h3 class="star-section-heading claim-star-heading">Claim Star</h3>
+          <button
+            class="star-section-button"
+            div="claim-star-button"
+            onclick="App.claimStarFunc()"
+          >
+            Claim a Star
+          </button>
+          <div class="star-section-results" id="claim-star-results"></div>
+        </div>
+      </section>
+    </main>
 
-    <label for="receiver">To address:</label>
-    <input
-      type="text"
-      id="receiver"
-      placeholder="e.g. 0x93e66d9baea28c17d9fc393b53e3fbdd76899dae"
-    />
-
-    <button onclick="App.sendCoin()">Send MetaCoin</button>
-
-    <p id="status"></p>
-    <p>
-      <strong>Hint:</strong> open the browser developer console to view any
-      errors and warnings.
-    </p>
+    <footer>@Copyright big smoke</footer>
     <script src="index.js"></script>
   </body>
 </html>
